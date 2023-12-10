@@ -5,11 +5,6 @@ import Link from 'next/link';
 import { IoMailUnreadSharp } from 'react-icons/io5';
 
 
-function getCurrentYear(): React.ReactNode {
-  const currentYear = new Date().getFullYear().toString();
-  return <>{currentYear}</>;
-}
-
 
 function Footer() {
 
@@ -17,7 +12,7 @@ function Footer() {
     {
       position: 0,
       title: '',
-      icon:<IoMailUnreadSharp />,
+      icon: <IoMailUnreadSharp />,
       link: 'https://www.google.com/',
     },
     {
@@ -66,7 +61,7 @@ function Footer() {
               title="Get inspired by more great work"
               className="flex flex-col items-center justify-center"
             >
-        
+
               <p className="mt-2 font-semibold uppercase text-sm">
                 Hand crafted by{' '}
                 <span className="font-display font-normal">
@@ -78,33 +73,31 @@ function Footer() {
           <div className="flex w-full flex-col-reverse items-center justify-center gap-5 py-8 lg:flex-row">
             <div className="flex basis-1/3 items-center justify-start">
               <p className="text-neutrals-300 text-xs">
-                Copyright &copy; {getCurrentYear()} WEB DEVELOPMENT All Rights
+                Copyright &copy; 2023 devITglobeAll Rights
                 Reserved.
               </p>
             </div>
             <div className="flex basis-1/3 items-center justify-center gap-x-2">
-              {socials.map((social) => {
+              {socials.map((social) => (
+                <a
+                  key={social.position}
+                  href={social.link}
+                  rel="noreferrer"
+                  target="_blank"
+                  title={social.title}
+                  className="text-neutrals-300 transition-colors duration-200 focus-visible:text-neutrals-50 hover:text-neutrals-50"
+                >
+                  <div className='h-12 w-12'>{social.icon}</div>
+                </a>
+              ))}
 
-                return (
-                  <a
-                    key={social.position}
-                    href={social.link}
-                    rel="noreferrer"
-                    target="_blank"
-                    title={social.title}
-                    className="text-neutrals-300 transition-colors duration-200 focus-visible:text-neutrals-50 hover:text-neutrals-50"
-                  >
-                   <div className='h-12 w-12'>{social.icon}</div>
-                  </a>
-                );
-              })}
             </div>
             <div className="flex basis-1/3 items-center justify-end">
               <Link
                 href="/imprint"
                 className="uppercase text-neutrals-300 transition-colors duration-200 text-xs focus-visible:text-neutrals-50 hover:text-neutrals-50"
               >
-                Develop by 
+                Develop by
               </Link>
             </div>
           </div>

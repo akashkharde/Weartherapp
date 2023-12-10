@@ -5,7 +5,7 @@ import {
   ThreeHourResponse,
 } from 'openweathermap-ts/dist/types';
 
-const WEATHER_API_KEY = "e5af46ec4036394b56153ee922852469";
+const WEATHER_API_KEY = 'e5af46ec4036394b56153ee922852469';
 
 if (WEATHER_API_KEY === undefined) {
   throw new Error('.env variable WEATHER_API_KEY is undefined');
