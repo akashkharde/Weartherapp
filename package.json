@@ -12,9 +12,6 @@
     "lint": "next lint",
     "postinstall": "prisma generate"
   },
-  "prisma": {
-    "schema": "src/prisma/schema.prisma"
-  },
   "dependencies": {
     "@fontsource/roboto": "^5.0.8",
     "@fontsource/roboto-condensed": "^5.0.8",
