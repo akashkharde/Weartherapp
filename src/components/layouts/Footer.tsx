@@ -27,7 +27,7 @@ function Footer() {
       icon: <IoMailUnreadSharp />,
       link: 'https://www.google.com/',
     },
-  ]
+  ];
 
   return (
     <footer className="relative isolate mt-24 w-full bg-neutrals-900 py-4">

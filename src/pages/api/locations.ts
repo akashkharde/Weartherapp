@@ -12,7 +12,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     return errorRes(res, 405, 'Method not allowed');
   }
 
-  const { startsWith, limit } = req.query as Partial<{ [key: string]: string }>;
+  const { startsWith, limit }: { startsWith?: string, limit?: string } = req.query;
 
   if (!startsWith) {
     return errorRes(res, 400, 'startsWith parameter is required');
@@ -31,7 +31,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const locations = await prisma.location.findMany({
     where: {
       name: {
-        startsWith,
+        startsWith: startsWith as string, // Assuming startsWith is a string
       },
     },
     take: limitNum,
