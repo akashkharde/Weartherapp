@@ -2,7 +2,7 @@ import weatherworksLogoImage from '@/assets/images/logos/weatherworks.png';
 import Container from '@/components/Container';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IoMailUnreadSharp } from "react-icons/io5";
+import { IoMailUnreadSharp } from 'react-icons/io5';
 
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
     {
       position: 0,
       title: 'View GitHub profile',
-      icon:<IoMailUnreadSharp />,
+      icon: <IoMailUnreadSharp />,
       link: 'https://www.google.com/',
     },
     {
@@ -26,7 +26,7 @@ function Header() {
       icon: <IoMailUnreadSharp />,
       link: 'https://www.google.com/',
     },
-  ]
+  ];
   return (
     <header className="w-full py-3">
       <Container>
@@ -42,21 +42,18 @@ function Header() {
             />
           </Link>
           <div className="flex gap-x-2">
-            {socials.map((social) => {
-
-              return (
-                <a
-                  key={social.position}
-                  href={social.link}
-                  rel="noreferrer"
-                  target="_blank"
-                  title={social.title}
-                  className="text-neutrals-50/70 transition-colors duration-200 focus-visible:text-neutrals-50 hover:text-neutrals-50"
-                >
-                <div  className="h-10 w-10">{social.icon}</div>
-                </a>
-              );
-            })}
+            {socials.map((social) => (
+              <a
+                key={social.position}
+                href={social.link}
+                rel="noreferrer"
+                target="_blank"
+                title={social.title}
+                className="text-neutrals-50/70 transition-colors duration-200 focus-visible:text-neutrals-50 hover:text-neutrals-50"
+              >
+                <div className="h-10 w-10">{social.icon}</div>
+              </a>
+            ))}
           </div>
         </div>
       </Container>

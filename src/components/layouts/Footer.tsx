@@ -2,7 +2,7 @@ import weatherworksLogoImage from '@/assets/images/logos/weatherworks.png';
 import Container from '@/components/Container';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IoMailUnreadSharp } from "react-icons/io5";
+import { IoMailUnreadSharp } from 'react-icons/io5';
 
 
 function getCurrentYear(): React.ReactNode {
