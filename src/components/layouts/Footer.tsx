@@ -1,16 +1,15 @@
 import weatherworksLogoImage from '@/assets/images/logos/weatherworks.png';
 import Container from '@/components/Container';
-import socials from '@/data/socials';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoMailUnreadSharp } from "react-icons/io5";
 
 
-function getCurrentYear() {
+function getCurrentYear(): React.ReactNode {
   const currentYear = new Date().getFullYear().toString();
-
-  return currentYear;
+  return <>{currentYear}</>;
 }
+
 
 function Footer() {
 
