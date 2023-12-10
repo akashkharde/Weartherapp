@@ -3,12 +3,10 @@ import Header from '@/components/layouts/Header';
 import { ReactNode } from 'react';
 
 interface Props {
-  title: string;
-  slug?: string;
   children: ReactNode;
 }
 
-function Layout({children }: Props) {
+function Layout({ children }: Props) {
   return (
     <>
       <Header />
