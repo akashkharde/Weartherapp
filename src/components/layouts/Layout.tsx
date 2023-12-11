@@ -8,7 +8,7 @@ interface Props {
   children: ReactNode;
 }
 
-function Layout({ title, slug, children }: Props) {
+function Layout({ title = '', slug = '', children }: Props) {
   return (
     <>
       <Header />
@@ -23,3 +23,4 @@ function Layout({ title, slug, children }: Props) {
 }
 
 export default Layout;
+
