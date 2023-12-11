@@ -12,32 +12,21 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     return errorRes(res, 405, 'Method not allowed');
   }
 
-  const { startsWith, limit }: { startsWith?: string; limit?: string } = req.query as { startsWith?: string; limit?: string };
+  const { startsWith, limit }: { startsWith?: string, limit?: string } = req.query;
 
   if (!startsWith) {
-    return (errorRes as any)(res, 'Method not allowed');
+    return errorRes(res, 400, 'startsWith parameter is required');
   }
 
   if (!limit) {
-    return (errorRes as any)(res, 'Method not allowed');
+    return errorRes(res, 400, 'limit parameter is required');
   }
 
   const limitNum = parseInt(limit, 10);
 
   if (Number.isNaN(limitNum)) {
-    return (errorRes as any)(res, 'Method not allowed');
+    return errorRes(res, 400, 'limit parameter must be of type number');
   }
-
-  const locations = await prisma.location.findMany({
-    where: {
-      name: {
-        startsWith: startsWith as string,
-      },
-    },
-    take: limitNum,
-  });
-
-  return res.json(locations);
 }
 
 export default handler;
