@@ -2,32 +2,11 @@ import weatherworksLogoImage from '@/assets/images/logos/weatherworks.png';
 import Container from '@/components/Container';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IoMailUnreadSharp } from 'react-icons/io5';
 
 
 
 function Footer() {
 
-  const socials = [
-    {
-      position: 0,
-      title: '',
-      icon: <IoMailUnreadSharp />,
-      link: 'https://www.google.com/',
-    },
-    {
-      position: 1,
-      title: '',
-      icon: <IoMailUnreadSharp />,
-      link: 'https://www.google.com/',
-    },
-    {
-      position: 2,
-      title: '',
-      icon: <IoMailUnreadSharp />,
-      link: 'https://www.google.com/',
-    },
-  ];
 
   return (
     <footer className="relative isolate mt-24 w-full bg-neutrals-900 py-4">
@@ -77,21 +56,7 @@ function Footer() {
                 Reserved.
               </p>
             </div>
-            <div className="flex basis-1/3 items-center justify-center gap-x-2">
-              {socials.map((social) => (
-                <a
-                  key={social.position}
-                  href={social.link}
-                  rel="noreferrer"
-                  target="_blank"
-                  title={social.title}
-                  className="text-neutrals-300 transition-colors duration-200 focus-visible:text-neutrals-50 hover:text-neutrals-50"
-                >
-                  <div className='h-12 w-12'>{social.icon}</div>
-                </a>
-              ))}
-
-            </div>
+  
             <div className="flex basis-1/3 items-center justify-end">
               <Link
                 href="/imprint"
