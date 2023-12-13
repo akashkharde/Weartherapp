@@ -34,17 +34,17 @@ function Footer() {
           </div>
           <div className="flex w-full items-center justify-center py-8">
             <a
-              href="https://main--teal-gelato-5ac22c.netlify.app/"
+              href="https://www.devitglobe.com/"
               rel="noreferrer"
               target="_blank"
               title="Get inspired by more great work"
               className="flex flex-col items-center justify-center"
             >
 
-              <p className="mt-2 font-semibold uppercase text-sm">
+              <p className="mt-2 font-semibold  text-sm">
                 Hand crafted by{' '}
                 <span className="font-display font-normal">
-                  <b>WEB </b> DEVELOPMENT
+                  devITglobe
                 </span>
               </p>
             </a>
