@@ -5,7 +5,7 @@ import GeolocationSection from '@/components/sections/GeolocationSection';
 
 function Home() {
   return (
-    <Layout title="Page Title">
+    <Layout title="">
       <Background src="/images/waves/background1.svg" />
       <GeolocationSection />
       <FavouritesSection />

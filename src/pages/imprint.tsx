@@ -5,8 +5,8 @@ function Imprint() {
   
   return (
     <Layout
-      title="Imprint | WeatherWorks"
-      slug="developby"
+      title=""
+      slug=""
     >
       <ImprintSection />
     </Layout>

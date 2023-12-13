@@ -13,8 +13,6 @@ function Layout({ title = '', slug = '', children }: Props) {
     <>
       <Header />
       <main>
-        {title && <h1>{title}</h1>}
-        {slug && <p>{slug}</p>}
         {children}
       </main>
       <Footer />
